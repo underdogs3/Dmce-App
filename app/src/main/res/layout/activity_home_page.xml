@@ -20,5 +20,5 @@
         android:background="@color/cardview_light_background"
         android:fitsSystemWindows="true"
         app:menu="@menu/main_menu"/>
-
+    
 </androidx.drawerlayout.widget.DrawerLayout>
