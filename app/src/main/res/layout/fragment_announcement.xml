@@ -7,12 +7,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/layout_announcement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_centerInParent="true"
-        android:id="@+id/layout_announcement"
-        android:textSize="36dp"
-        android:text="AnnouncementPage" />
+        android:layout_gravity="center"
+        android:text="Announcement"
+        android:textSize="36dp" />
 
 </RelativeLayout>

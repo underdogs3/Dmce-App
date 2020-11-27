@@ -7,12 +7,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/layout_timetable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_centerInParent="true"
-        android:id="@+id/layout_timetable"
-        android:textSize="36dp"
-        android:text="TimeTablePage" />
+        android:layout_gravity="center"
+        android:text="TimeTable"
+        android:textSize="36dp" />
 
 </FrameLayout>
