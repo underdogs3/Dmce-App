@@ -1,18 +1,13 @@
 package com.example.loginpage;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,10 +16,7 @@ public class MainActivity extends AppCompatActivity {
        private Button eLogin;
 
 
-       private String Username="Admin";
-       private String Password="12345678";
-
-       boolean isValid = false;
+    boolean isValid = false;
        private  int counter = 5;
 
 
@@ -78,9 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validate (String name, String password){
 
-        if(name.equals(Username) && password.equals(Password)){
-            return true;
-        }
-        return false;
+        String password1 = "12345678";
+        String username = "Admin";
+        return name.equals(username) && password.equals(password1);
     }
 }

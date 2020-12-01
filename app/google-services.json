@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "706266597227",
+    "firebase_url": "https://dmceapp.firebaseio.com",
+    "project_id": "dmceapp",
+    "storage_bucket": "dmceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706266597227:android:bc063b103290bf1a35ee2e",
+        "android_client_info": {
+          "package_name": "com.example.loginpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706266597227-2inq300f5vrjotm7q62g47n78pj28d60.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginpage",
+            "certificate_hash": "aef61cf1b3d8742fcb52c86be9f1de3fc2747503"
+          }
+        },
+        {
+          "client_id": "706266597227-4072g6f801rrjuj53h5ub9re47raunk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjWnbjyvnzpUkN3r9KXofFHVMMUSGwb5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706266597227-4072g6f801rrjuj53h5ub9re47raunk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
