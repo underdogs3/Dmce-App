@@ -8,7 +8,7 @@
 
     <item android:id="@+id/timetable"
         android:title="TimeTable"
-        android:icon="@drawable/ic_baseline_timetable_24"/>
+        android:icon="@drawable/ic_calendar"/>
 
     <item android:id="@+id/mycourse"
         android:title="MyCourse"
@@ -19,7 +19,7 @@
         android:icon="@drawable/checking_attendance"/>
     <item android:id="@+id/announcement"
         android:title="Announcement"
-        android:icon="@drawable/promotion"/>
+        android:icon="@drawable/announcement"/>
     <item android:id="@+id/more"
         android:title="More">
         <menu>

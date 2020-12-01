@@ -34,7 +34,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
 
 
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.homeAppBar);
         setSupportActionBar(toolbar);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,toolbar, R.string.open, R.string.close);
