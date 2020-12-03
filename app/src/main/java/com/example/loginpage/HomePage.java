@@ -1,9 +1,17 @@
 package com.example.loginpage;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,17 +29,24 @@ import com.example.loginpage.Fragment.ProfileFragment;
 import com.example.loginpage.Fragment.TimeTableFragment;
 import com.google.android.material.navigation.NavigationView;
 
+import javax.security.auth.Subject;
+
+
 public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
 
     Toolbar toolbar;
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle mDrawerToggle;
 
+
+
+
+
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-
 
 
         toolbar = findViewById(R.id.toolbar);
@@ -48,6 +63,10 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         showFragment(new HomeFragment());
 
     }
+
+
+
+
 
     @Override
     public boolean onNavigationItemSelected (@NonNull MenuItem item) {
@@ -68,6 +87,8 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
         if (id == R.id.attendance) {
             showFragment(new AttendanceFragment());
+
+
         }
 
 
