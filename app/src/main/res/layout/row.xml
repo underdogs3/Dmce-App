@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:id="@+id/sub"
+         android:text="SUBJECT "
+         android:textColor="#000"
+         android:textStyle="bold"
+        android:gravity="start"/>
+        <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Percentage: "
+        android:textColor="#a9a9a9"
+        android:gravity="right"/>
+
+        <TextView
+            android:id="@+id/Percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:text="100%"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/classes_attended"
+        android:textColor="#a9a9a9"
+        android:gravity="start"
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/classesAttended"
+    android:text="43"
+    android:textColor="@color/colorAccent"
+    android:textStyle="bold"
+        android:gravity="center"
+        />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Total Classes: "
+            android:textColor="#a9a9a9"
+            android:gravity="end"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/classesTotal"
+            android:text="43"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:gravity="center"/>
+</LinearLayout>
+
+    </LinearLayout>
