@@ -1,5 +1,6 @@
 package com.example.loginpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -80,8 +81,10 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
             showFragment(new ProfileFragment());
         }
 
-        if (id == R.id.logout) {
-            showFragment(new LogoutFragment());
+        else if (id == R.id.logout) {
+           Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+           startActivity(intent);
+           finish();
         }
       mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
