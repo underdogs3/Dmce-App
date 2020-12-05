@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+                         <!-- Monday-->
+    <Button
+        android:id="@+id/mondaytitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:layout_margin="6dp"
+        android:background="#30B9DC"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_gravity="center_horizontal"/>
+
+    <ListView
+        android:id="@+id/timetable_listview_mon"
+        android:layout_width="match_parent"
+        android:layout_height="540dp" />
+                               <!-- Tuesday-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="6dp"
+            android:background="#30B9DC"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Tuesday"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+        <ListView
+            android:id="@+id/timetable_listview_tue"
+            android:layout_width="match_parent"
+            android:layout_height="540dp" />
+                                <!--Wednesday-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="6dp"
+            android:background="#30B9DC"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Wednesday"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+        <ListView
+            android:id="@+id/timetable_listview_wed"
+            android:layout_width="match_parent"
+            android:layout_height="540dp" />
+                                <!--Thursday-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="6dp"
+            android:background="#30B9DC"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Thursday"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+        <ListView
+            android:id="@+id/timetable_listview_thur"
+            android:layout_width="match_parent"
+            android:layout_height="540dp" />
+                            <!--Friday-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="6dp"
+            android:background="#30B9DC"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Friday"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+        <ListView
+            android:id="@+id/timetable_listview_fri"
+            android:layout_width="match_parent"
+            android:layout_height="540dp" />
+
+
+
+
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -45,7 +46,7 @@ public class MyCourseFragment extends Fragment {
             R.drawable.ic_baseline_person_24,
             R.drawable.ic_baseline_person_24};
 
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView (@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my_course, container, false);
 
 
@@ -66,7 +67,7 @@ public class MyCourseFragment extends Fragment {
         String[] rDescription;
         int[] rImages;
 
-        MyAdapter(Context c, String[] title, String[] description, int[] images) {
+        MyAdapter (Context c, String[] title, String[] description, int[] images) {
             super(c, R.layout.row1, R.id.txt1, title);
             this.context = c;
             this.rTitle = title;
@@ -75,22 +76,5 @@ public class MyCourseFragment extends Fragment {
 
         }
 
-
-        @NonNull
-        @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("ViewHolder") View raw = layoutInflater.inflate(R.layout.row1, parent, false);
-            ImageView images = raw.findViewById(R.id.image);
-            TextView myTitle = raw.findViewById(R.id.txt1);
-            TextView myDescription = raw.findViewById(R.id.txt2);
-
-            // now set our resources on views
-            images.setImageResource(rImages[position]);
-            myTitle.setText(rTitle[position]);
-            myDescription.setText(rDescription[position]);
-
-            return raw;
-        }
     }
 }
