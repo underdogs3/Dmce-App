@@ -75,6 +75,21 @@ public class MyCourseFragment extends Fragment {
             this.rImages = images;
 
         }
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            @SuppressLint("ViewHolder") View row1 = layoutInflater.inflate(R.layout.row1, parent, false);
 
+            ImageView imageView = row1.findViewById(R.id.image);
+            TextView myTitle = row1.findViewById(R.id.txt1);
+            TextView myDescription = row1.findViewById(R.id.txt2);
+
+            imageView.setImageResource(rImages[position]);
+            myTitle.setText(rTitle[position]);
+            myDescription.setText(rDescription[position]);
+
+            return row1;
+        }
     }
 }
