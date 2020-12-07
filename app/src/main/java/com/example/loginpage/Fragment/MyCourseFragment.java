@@ -85,7 +85,7 @@ public class MyCourseFragment extends Fragment {
             TextView myTitle = row1.findViewById(R.id.txt1);
             TextView myDescription = row1.findViewById(R.id.txt2);
 
-            imageView.setImageResource(rImages[position]);
+           imageView.setImageResource(rImages[position]);
             myTitle.setText(rTitle[position]);
             myDescription.setText(rDescription[position]);
 
