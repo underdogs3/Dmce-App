@@ -9,11 +9,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
        private EditText eName;
        private EditText ePassword;
        private Button eLogin;
+
+       private FirebaseAuth auth;
 
 
     boolean isValid = false;
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         ePassword = findViewById(R.id.etPassword);
         eLogin = findViewById(R.id.BtnLogin);
 
+        auth = FirebaseAuth.getInstance();
 
         eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,42 +43,24 @@ public class MainActivity extends AppCompatActivity {
 
                 String inputName = eName.getText().toString();
                 String inputPassword = ePassword.getText().toString();
-
-                if(inputName.isEmpty() || inputPassword.isEmpty()){
-
-                    Toast.makeText(MainActivity.this, "Please enter all the details correctly",Toast.LENGTH_SHORT).show();
-                }else{
-
-                    isValid = validate(inputName, inputPassword);
-
-                    if(!isValid){
-
-                        counter--;
-                        Toast.makeText(MainActivity.this, "Incorrect credentials entered",Toast.LENGTH_SHORT).show();
-
-                        Toast.makeText(MainActivity.this, "No. of attempts Remaining:" + counter ,Toast.LENGTH_SHORT).show();
+                loginUser(inputName , inputPassword);
 
 
-                        if(counter==0){
-                            eLogin.setEnabled(false);
-                        }
+            }
 
-                    }else {
-                        Toast.makeText(MainActivity.this, "Login successful",Toast.LENGTH_SHORT).show();
+            private void loginUser(String Name, String Password) {
 
-                        Intent intent = new Intent(MainActivity.this, HomePage.class);
-                        startActivity(intent);
+                auth.signInWithEmailAndPassword( Name, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    @Override
+                    public void onSuccess(AuthResult authResult) {
+                        Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this , HomePage.class));
+                        finish();
                     }
-
-                }
+                });
             }
         });
     }
 
-    private boolean validate (String name, String password){
 
-        String password1 = "12345678";
-        String username = "Admin";
-        return name.equals(username) && password.equals(password1);
-    }
 }
