@@ -27,59 +27,59 @@ public class ProfileFragment extends Fragment {
                               Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        String[] ptitle = {
-                "First Name",
-                "Last Name",
-                "Date of Birth",
-                "Email id",
-                "Phone",
-                "Father Name",
-                "Mother Name"
-        };
-
-        String[] psubtitle = {
-                "xyz",
-                "xyz",
-                "DD/MM/YYY",
-                "xyz@",
-                "123456789",
-                "xyz",
-                "xyz",
-        };
-
-        ListView listView = view.findViewById(R.id.list2);
-        MyAdapter adapter = new MyAdapter(getActivity(),ptitle,psubtitle);
-        listView.setAdapter(adapter);
+//        String[] ptitle = {
+//                "First Name",
+//                "Last Name",
+//                "Date of Birth",
+//                "Email id",
+//                "Phone",
+//                "Father Name",
+//                "Mother Name"
+//        };
+//
+//        String[] psubtitle = {
+//                "xyz",
+//                "xyz",
+//                "DD/MM/YYY",
+//                "xyz@",
+//                "123456789",
+//                "xyz",
+//                "xyz",
+//        };
+//
+//        ListView listView = view.findViewById(R.id.list2);
+//        MyAdapter adapter = new MyAdapter(getActivity(),ptitle,psubtitle);
+//        listView.setAdapter(adapter);
 
                 return view;
     }
 
-        static class MyAdapter extends ArrayAdapter<String>{
+//        static class MyAdapter extends ArrayAdapter<String>{
+//
+//        Context context;
+//        String[] rtitle;
+//        String[] rsubtitle;
+//
+//        MyAdapter(Context c,String[] title, String[] subtitle){
+//            super(c,R.layout.profilelist,R.id.titletxt,title);
+//            this.context = c;
+//            this.rtitle = title;
+//            this.rsubtitle = subtitle;
+//        }
 
-        Context context;
-        String[] rtitle;
-        String[] rsubtitle;
-
-        MyAdapter(Context c,String[] title, String[] subtitle){
-            super(c,R.layout.profilelist,R.id.titletxt,title);
-            this.context = c;
-            this.rtitle = title;
-            this.rsubtitle = subtitle;
-        }
-
-            @NonNull
-            @Override
-            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-                LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("ViewHolder") View profilelist = layoutInflater.inflate(R.layout.profilelist, parent, false);
-
-                TextView myTitle = profilelist.findViewById(R.id.titletxt);
-                TextView mysubtitle = profilelist.findViewById(R.id.subtitletxt);
-
-                myTitle.setText(rtitle[position]);
-                mysubtitle.setText(rsubtitle[position]);
-
-                return profilelist;
-            }
-        }
+            //@NonNull
+//            @Override
+//            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+//                LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//                @SuppressLint("ViewHolder") View profilelist = layoutInflater.inflate(R.layout.profilelist, parent, false);
+//
+//                TextView myTitle = profilelist.findViewById(R.id.titletxt);
+//                TextView mysubtitle = profilelist.findViewById(R.id.subtitletxt);
+//
+//                myTitle.setText(rtitle[position]);
+//                mysubtitle.setText(rsubtitle[position]);
+//
+//                return profilelist;
+//            }
+//        }
 }

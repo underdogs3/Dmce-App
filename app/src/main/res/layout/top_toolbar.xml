@@ -13,12 +13,12 @@
             app:title="@string/Dmce"
             android:background="#30B9DC"
             android:elevation="3dp"
-            app:titleTextColor="@android:color/background_light" />
+            app:titleTextColor="@android:color/background_light"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_layout"/>
+        android:id="@+id/frame_layout" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

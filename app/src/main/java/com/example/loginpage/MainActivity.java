@@ -12,16 +12,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-       private EditText eName;
-       private EditText ePassword;
-       private Button eLogin;
+    private EditText eName;
+    private EditText ePassword;
+    private Button eLogin;
 
-       private FirebaseAuth auth;
+    private FirebaseAuth auth;
 
-
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
 
     @Override
@@ -41,24 +44,26 @@ public class MainActivity extends AppCompatActivity {
 
                 String inputName = eName.getText().toString();
                 String inputPassword = ePassword.getText().toString();
-                loginUser(inputName , inputPassword);
+                loginUser(inputName, inputPassword);
 
 
             }
 
             private void loginUser(String Name, String Password) {
 
-                auth.signInWithEmailAndPassword( Name, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                auth.signInWithEmailAndPassword(Name, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainActivity.this , HomePage.class));
+                        startActivity(new Intent(MainActivity.this, HomePage.class));
                         finish();
                     }
                 });
             }
         });
-    }
+
+     }
+
 
 
 }

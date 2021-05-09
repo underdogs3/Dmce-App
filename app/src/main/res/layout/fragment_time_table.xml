@@ -6,10 +6,8 @@
     android:layout_height="match_parent"
     android:layout_marginTop="?actionBarSize"
     tools:context=".Fragment.TimeTableFragment">
-<include layout="@layout/timetablcontainer"/>
 
-
-
+    <include layout="@layout/timetablcontainer" />
 
 
 </FrameLayout>
