@@ -12,58 +12,69 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText eName;
-    private EditText ePassword;
-    private Button eLogin;
+       private EditText eName;
+       private EditText ePassword;
+       private Button eLogin;
 
-    private FirebaseAuth auth;
+       private FirebaseAuth auth;
 
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
+
+    boolean isValid = false;
+       private  int counter = 5;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
+        if(SaveSharedPreference.getUserName(MainActivity.this).length() == 0) {
+            // call Login Activity
 
-        eName = findViewById(R.id.etName);
-        ePassword = findViewById(R.id.etPassword);
-        eLogin = findViewById(R.id.BtnLogin);
+            setContentView(R.layout.activity_login_page);
 
-        auth = FirebaseAuth.getInstance();
+            eName = findViewById(R.id.etName);
+            ePassword = findViewById(R.id.etPassword);
+            eLogin = findViewById(R.id.BtnLogin);
 
-        eLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            auth = FirebaseAuth.getInstance();
 
-                String inputName = eName.getText().toString();
-                String inputPassword = ePassword.getText().toString();
-                loginUser(inputName, inputPassword);
+            eLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick (View v) {
+
+                    String inputName = eName.getText().toString();
+                    String inputPassword = ePassword.getText().toString();
+                    loginUser(inputName, inputPassword);
 
 
-            }
+                }
 
-            private void loginUser(String Name, String Password) {
+                private void loginUser (final String Name, String Password) {
 
-                auth.signInWithEmailAndPassword(Name, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                    @Override
-                    public void onSuccess(AuthResult authResult) {
-                        Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainActivity.this, HomePage.class));
-                        finish();
-                    }
-                });
-            }
-        });
+                    auth.signInWithEmailAndPassword(Name, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                        @Override
+                        public void onSuccess (AuthResult authResult) {
+                            SaveSharedPreference.setUserName(MainActivity.this,Name);
+                            Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, HomePage.class));
+                            finish();
+                        }
+                    });
+                }
 
-     }
 
+            });
+        }
+        else
+    {
+        // Stay at the current activity.
+       // setContentView(R.layout.fragment_home);
+        startActivity(new Intent(MainActivity.this, HomePage.class));
+    }
+    }
 
 
 }
