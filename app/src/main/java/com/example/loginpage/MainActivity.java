@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
        private FirebaseAuth auth;
 
 
-    boolean isValid = false;
-       private  int counter = 5;
 
 
     @Override
