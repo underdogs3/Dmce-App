@@ -1,0 +1,20 @@
+Index: app/src/main/res/layout/fragment_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Fragment.ProfileFragment\">\r\n\r\n    <!-- TODO: Update blank fragment layout -->\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:layout_centerInParent=\"true\"\r\n        android:id=\"@+id/layout_profile\"\r\n        android:textSize=\"36dp\"\r\n        android:text=\"Profile\" />\r\n\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_profile.xml	(revision d50a7b98c3004f6312f0a0815ae0a312cb4051d0)
++++ app/src/main/res/layout/fragment_profile.xml	(date 1607090144938)
+@@ -12,7 +12,7 @@
+         android:layout_gravity="center"
+         android:layout_centerInParent="true"
+         android:id="@+id/layout_profile"
+-        android:textSize="36dp"
++        android:textSize="36sp"
+         android:text="Profile" />
+ 
+ </RelativeLayout>
+\ No newline at end of file
+diff --git .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14__Default_Changelist_.xml

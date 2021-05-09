@@ -1,0 +1,198 @@
+Index: app/src/main/java/com/example/loginpage/Fragment/ProfileFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.loginpage.Fragment;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Context;\r\nimport android.os.Bundle;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.fragment.app.Fragment;\r\n\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.ListView;\r\nimport android.widget.TextView;\r\n\r\nimport com.example.loginpage.R;\r\n\r\n\r\npublic class ProfileFragment extends Fragment {\r\n\r\n\r\n\r\n    @Override\r\n    public View onCreateView (LayoutInflater inflater, ViewGroup container,\r\n                              Bundle savedInstanceState) {\r\n        View view = inflater.inflate(R.layout.fragment_profile, container, false);\r\n\r\n//        String[] ptitle = {\r\n//                \"First Name\",\r\n//                \"Last Name\",\r\n//                \"Date of Birth\",\r\n//                \"Email id\",\r\n//                \"Phone\",\r\n//                \"Father Name\",\r\n//                \"Mother Name\"\r\n//        };\r\n//\r\n//        String[] psubtitle = {\r\n//                \"xyz\",\r\n//                \"xyz\",\r\n//                \"DD/MM/YYY\",\r\n//                \"xyz@\",\r\n//                \"123456789\",\r\n//                \"xyz\",\r\n//                \"xyz\",\r\n//        };\r\n//\r\n//        ListView listView = view.findViewById(R.id.list2);\r\n//        MyAdapter adapter = new MyAdapter(getActivity(),ptitle,psubtitle);\r\n//        listView.setAdapter(adapter);\r\n\r\n                return view;\r\n    }\r\n\r\n//        static class MyAdapter extends ArrayAdapter<String>{\r\n//\r\n//        Context context;\r\n//        String[] rtitle;\r\n//        String[] rsubtitle;\r\n//\r\n//        MyAdapter(Context c,String[] title, String[] subtitle){\r\n//            super(c,R.layout.profilelist,R.id.titletxt,title);\r\n//            this.context = c;\r\n//            this.rtitle = title;\r\n//            this.rsubtitle = subtitle;\r\n//        }\r\n\r\n            //@NonNull\r\n//            @Override\r\n//            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {\r\n//                LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);\r\n//                @SuppressLint(\"ViewHolder\") View profilelist = layoutInflater.inflate(R.layout.profilelist, parent, false);\r\n//\r\n//                TextView myTitle = profilelist.findViewById(R.id.titletxt);\r\n//                TextView mysubtitle = profilelist.findViewById(R.id.subtitletxt);\r\n//\r\n//                myTitle.setText(rtitle[position]);\r\n//                mysubtitle.setText(rsubtitle[position]);\r\n//\r\n//                return profilelist;\r\n//            }\r\n//        }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/loginpage/Fragment/ProfileFragment.java	(revision 2779f9ad7ff5beb39cb01be41447d34fe8608460)
++++ app/src/main/java/com/example/loginpage/Fragment/ProfileFragment.java	(date 1620564320972)
+@@ -16,10 +16,15 @@
+ import android.widget.TextView;
+ 
+ import com.example.loginpage.R;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.firestore.FirebaseFirestore;
+ 
+ 
+ public class ProfileFragment extends Fragment {
+ 
++    FirebaseAuth fAuth;
++    FirebaseFirestore fStore;
++    String userId;
+ 
+ 
+     @Override
+@@ -27,59 +32,24 @@
+                               Bundle savedInstanceState) {
+         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+ 
+-//        String[] ptitle = {
+-//                "First Name",
+-//                "Last Name",
+-//                "Date of Birth",
+-//                "Email id",
+-//                "Phone",
+-//                "Father Name",
+-//                "Mother Name"
+-//        };
+-//
+-//        String[] psubtitle = {
+-//                "xyz",
+-//                "xyz",
+-//                "DD/MM/YYY",
+-//                "xyz@",
+-//                "123456789",
+-//                "xyz",
+-//                "xyz",
+-//        };
+-//
+-//        ListView listView = view.findViewById(R.id.list2);
+-//        MyAdapter adapter = new MyAdapter(getActivity(),ptitle,psubtitle);
+-//        listView.setAdapter(adapter);
++        TextView name = view.findViewById(R.id.name);
++        TextView gr_number = view.findViewById(R.id.gr_number);
++        TextView year = view.findViewById(R.id.year);
++        TextView sem = view.findViewById(R.id.semester);
++        TextView email = view.findViewById(R.id.email);
++        TextView phone = view.findViewById(R.id.phone);
++        TextView dob = view.findViewById(R.id.dob);
++
++        fAuth = FirebaseAuth.getInstance();
++        fStore = FirebaseFirestore.getInstance();
++
++        userId = fAuth.getCurrentUser().getUid();
++
+ 
+                 return view;
+     }
+ 
+-//        static class MyAdapter extends ArrayAdapter<String>{
+-//
+-//        Context context;
+-//        String[] rtitle;
+-//        String[] rsubtitle;
+-//
+-//        MyAdapter(Context c,String[] title, String[] subtitle){
+-//            super(c,R.layout.profilelist,R.id.titletxt,title);
+-//            this.context = c;
+-//            this.rtitle = title;
+-//            this.rsubtitle = subtitle;
+-//        }
++
+ 
+-            //@NonNull
+-//            @Override
+-//            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+-//                LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+-//                @SuppressLint("ViewHolder") View profilelist = layoutInflater.inflate(R.layout.profilelist, parent, false);
+-//
+-//                TextView myTitle = profilelist.findViewById(R.id.titletxt);
+-//                TextView mysubtitle = profilelist.findViewById(R.id.subtitletxt);
+-//
+-//                myTitle.setText(rtitle[position]);
+-//                mysubtitle.setText(rsubtitle[position]);
+-//
+-//                return profilelist;
+-//            }
+-//        }
++
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@drawable/back9\"\r\n    android:paddingTop=\"?actionBarSize\"\r\n    tools:context=\".Fragment.ProfileFragment\">\r\n\r\n\r\n    <RelativeLayout\r\n        android:id=\"@+id/list2\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:paddingBottom=\"20dp\">\r\n\r\n        <RelativeLayout\r\n            android:id=\"@+id/imgUser\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_centerHorizontal=\"true\"\r\n            android:layout_marginTop=\"20dp\"\r\n            >\r\n\r\n            <ImageView\r\n                android:layout_width=\"120dp\"\r\n                android:layout_height=\"120dp\"\r\n                android:layout_margin=\"9dp\"\r\n                android:adjustViewBounds=\"true\"\r\n                android:padding=\"3dp\"\r\n                android:scaleType=\"centerInside\"\r\n                android:src=\"@drawable/samar\" />\r\n\r\n        </RelativeLayout>\r\n\r\n        <TextView\r\n            android:id=\"@+id/tv_name\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_below=\"@+id/imgUser\"\r\n            android:layout_centerHorizontal=\"true\"\r\n            android:layout_marginTop=\"15sp\"\r\n            android:fontFamily=\"sans-serif-light\"\r\n            android:text=\"Samar Santosh Patil\"\r\n            android:textColor=\"@color/colorPrimaryDark\"\r\n            android:textSize=\"20sp\" />\r\n\r\n\r\n        <TextView\r\n            android:id=\"@+id/tv_address\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_below=\"@+id/tv_name\"\r\n            android:layout_centerHorizontal=\"true\"\r\n            android:fontFamily=\"sans-serif\"\r\n            android:text=\"2019FHCO079\"\r\n            android:textAllCaps=\"true\"\r\n            android:textColor=\"@color/colorPrimaryDark\"\r\n            android:textSize=\"14sp\" />\r\n\r\n        <ImageView\r\n            android:layout_width=\"60dp\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_alignParentRight=\"true\"\r\n            android:layout_marginRight=\"15dp\"\r\n            android:layout_marginTop=\"15dp\"\r\n            android:adjustViewBounds=\"true\"\r\n            android:scaleType=\"centerInside\"\r\n            android:src=\"@drawable/newlogo\" />\r\n\r\n    </RelativeLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/linlay1\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/list2\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <RelativeLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_weight=\"1\"\r\n            android:gravity=\"center\"\r\n            android:paddingBottom=\"5dp\"\r\n            android:paddingTop=\"5dp\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:gravity=\"center_horizontal\"\r\n                android:orientation=\"vertical\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"Second Year\"\r\n                    android:textColor=\"@color/colorPrimaryDark\"\r\n                    android:textSize=\"20sp\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"Semester 3\"\r\n                    android:textAllCaps=\"true\"\r\n                    android:textColor=\"@color/colorPrimary\"\r\n                    android:textSize=\"15sp\" />\r\n\r\n            </LinearLayout>\r\n\r\n        </RelativeLayout>\r\n\r\n        <RelativeLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_weight=\"1\"\r\n            android:gravity=\"center\"\r\n            android:paddingBottom=\"5dp\"\r\n            android:paddingTop=\"5dp\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:gravity=\"center_horizontal\"\r\n                android:orientation=\"vertical\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"99%\"\r\n                    android:textColor=\"@color/colorPrimaryDark\"\r\n                    android:textSize=\"25sp\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"Attendence\"\r\n                    android:textAllCaps=\"true\"\r\n                    android:textColor=\"@color/colorPrimary\"\r\n                    android:textSize=\"13sp\" />\r\n\r\n            </LinearLayout>\r\n\r\n        </RelativeLayout>\r\n\r\n    </LinearLayout>\r\n\r\n\r\n    <RelativeLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_below=\"@+id/linlay1\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_centerInParent=\"true\"\r\n            android:layout_marginLeft=\"30dp\"\r\n            android:layout_marginRight=\"30dp\"\r\n            android:layout_marginTop=\"20dp\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:orientation=\"vertical\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:text=\"Email\"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"13sp\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"joey@sharenofood.com\"\r\n                    android:textColor=\"#000000\"\r\n                    android:textSize=\"18sp\" />\r\n\r\n                <View\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"1dp\"\r\n                    android:layout_marginTop=\"15dp\"\r\n                    android:background=\"@color/grey\" />\r\n\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginTop=\"15dp\"\r\n                android:orientation=\"vertical\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:text=\"Phone\"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"13sp\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"+1-202-555-0157\"\r\n                    android:textColor=\"#000000\"\r\n                    android:textSize=\"18sp\" />\r\n\r\n                <View\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"1dp\"\r\n                    android:layout_marginTop=\"15dp\"\r\n                    android:background=\"@color/grey\" />\r\n\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginTop=\"15dp\"\r\n                android:orientation=\"vertical\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:text=\"Date of Birth\"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"13sp\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:fontFamily=\"sans-serif-light\"\r\n                    android:text=\"@string/date_of_birth\"\r\n                    android:textColor=\"#000000\"\r\n                    android:textSize=\"18sp\" />\r\n\r\n                <View\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"1dp\"\r\n                    android:layout_marginTop=\"15dp\"\r\n                    android:background=\"@color/grey\" />\r\n\r\n            </LinearLayout>\r\n\r\n\r\n\r\n\r\n        </LinearLayout>\r\n\r\n    </RelativeLayout>\r\n\r\n</RelativeLayout>\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_profile.xml	(revision 2779f9ad7ff5beb39cb01be41447d34fe8608460)
++++ app/src/main/res/layout/fragment_profile.xml	(date 1620563859139)
+@@ -36,7 +36,7 @@
+         </RelativeLayout>
+ 
+         <TextView
+-            android:id="@+id/tv_name"
++            android:id="@+id/name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/imgUser"
+@@ -49,10 +49,10 @@
+ 
+ 
+         <TextView
+-            android:id="@+id/tv_address"
++            android:id="@+id/gr_number"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+-            android:layout_below="@+id/tv_name"
++            android:layout_below="@+id/name"
+             android:layout_centerHorizontal="true"
+             android:fontFamily="sans-serif"
+             android:text="2019FHCO079"
+@@ -95,6 +95,7 @@
+                 android:orientation="vertical">
+ 
+                 <TextView
++                    android:id="@+id/year"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="sans-serif-light"
+@@ -103,6 +104,7 @@
+                     android:textSize="20sp" />
+ 
+                 <TextView
++                    android:id="@+id/semester"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="sans-serif-light"
+@@ -181,6 +183,7 @@
+                     android:textSize="13sp" />
+ 
+                 <TextView
++                    android:id="@+id/email"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="sans-serif-light"
+@@ -210,6 +213,7 @@
+                     android:textSize="13sp" />
+ 
+                 <TextView
++                    android:id="@+id/phone"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="sans-serif-light"
+@@ -239,6 +243,7 @@
+                     android:textSize="13sp" />
+ 
+                 <TextView
++                    android:id="@+id/dob"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="sans-serif-light"
+@@ -250,7 +255,7 @@
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_marginTop="15dp"
+-                    android:background="@color/grey" />
++                    />
+ 
+             </LinearLayout>
+ 
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\r\n\r\nandroid {\r\n    compileSdkVersion 30\r\n    buildToolsVersion \"30.0.2\"\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.loginpage\"\r\n        minSdkVersion 16\r\n        targetSdkVersion 30\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation fileTree(dir: \"libs\", include: [\"*.jar\"])\r\n    implementation 'androidx.appcompat:appcompat:1.2.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'\r\n    implementation 'androidx.recyclerview:recyclerview:1.1.0'\r\n    implementation 'com.google.android.material:material:1.2.1'\r\n    implementation 'androidx.legacy:legacy-support-v4:1.0.0'\r\n    implementation platform('com.google.firebase:firebase-bom:26.1.0')\r\n    implementation 'com.google.firebase:firebase-analytics'\r\n    implementation 'com.google.firebase:firebase-auth:19.2.0'\r\n    implementation 'com.google.firebase:firebase-database:19.2.1'\r\n    implementation 'com.google.firebase:firebase-storage:19.1.1'\r\n    testImplementation 'junit:junit:4.12'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\r\n\r\n\r\n}\r\napply plugin: 'com.google.gms.google-services'
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 2779f9ad7ff5beb39cb01be41447d34fe8608460)
++++ app/build.gradle	(date 1620563998434)
+@@ -34,6 +34,7 @@
+     implementation 'com.google.firebase:firebase-auth:19.2.0'
+     implementation 'com.google.firebase:firebase-database:19.2.1'
+     implementation 'com.google.firebase:firebase-storage:19.1.1'
++    implementation 'com.google.firebase:firebase-firestore:22.1.2'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
