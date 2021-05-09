@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
 <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -13,14 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-                         <!-- Monday-->
+        <!-- Monday-->
     <Button
         android:id="@+id/mondaytitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/trial"
         android:text="Monday"
         android:layout_margin="6dp"
-        android:background="#30B9DC"
         android:fontFamily="@font/roboto_medium"
         android:textSize="20dp"
         android:textColor="#fff"
@@ -36,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="6dp"
-            android:background="#30B9DC"
+            android:background="@drawable/trial"
             android:fontFamily="@font/roboto_medium"
             android:text="Tuesday"
             android:textColor="#fff"
@@ -51,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="6dp"
-            android:background="#30B9DC"
+            android:background="@drawable/trial"
             android:fontFamily="@font/roboto_medium"
             android:text="Wednesday"
             android:textColor="#fff"
@@ -66,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="6dp"
-            android:background="#30B9DC"
+            android:background="@drawable/trial"
             android:fontFamily="@font/roboto_medium"
             android:text="Thursday"
             android:textColor="#fff"
@@ -81,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="6dp"
-            android:background="#30B9DC"
+            android:background="@drawable/trial"
             android:fontFamily="@font/roboto_medium"
             android:text="Friday"
             android:textColor="#fff"
@@ -97,4 +93,4 @@
 </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+

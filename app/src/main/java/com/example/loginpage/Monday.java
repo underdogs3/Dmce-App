@@ -17,4 +17,6 @@ public class Monday {
         this.classNo = classno;
         this.to = to;
     }
+
+
 }

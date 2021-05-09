@@ -1,0 +1,254 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14__Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14__Default_Changelist_.xml	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14__Default_Changelist_.xml	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_01-12-2020_18_14_[Default_Changelist]" date="1606826663411" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 01-12-2020 18:14 [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14_[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14_[Default_Changelist]/shelved.patch	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_01-12-2020_18_14_[Default_Changelist]/shelved.patch	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
+@@ -1,36 +0,0 @@
+-Index: build.gradle
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nbuildscript {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n    dependencies {\r\n        classpath \"com.android.tools.build:gradle:4.0.1\"\r\n\r\n        // NOTE: Do not place your application dependencies here; they belong\r\n        // in the individual module build.gradle files\r\n    }\r\n}\r\n\r\nallprojects {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- build.gradle	(revision 83305b8e1e7e2a08297a4ab5f72615a4406f4417)
+-+++ build.gradle	(date 1606570354308)
+-@@ -5,7 +5,7 @@
+-         jcenter()
+-     }
+-     dependencies {
+--        classpath "com.android.tools.build:gradle:4.0.1"
+-+        classpath 'com.android.tools.build:gradle:4.1.0'
+- 
+-         // NOTE: Do not place your application dependencies here; they belong
+-         // in the individual module build.gradle files
+-Index: gradle/wrapper/gradle-wrapper.properties
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>#Sat Oct 10 12:45:24 IST 2020\r\ndistributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-6.1.1-all.zip\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>windows-1252
+-===================================================================
+---- gradle/wrapper/gradle-wrapper.properties	(revision 83305b8e1e7e2a08297a4ab5f72615a4406f4417)
+-+++ gradle/wrapper/gradle-wrapper.properties	(date 1606570354311)
+-@@ -1,6 +1,6 @@
+--#Sat Oct 10 12:45:24 IST 2020
+-+#Sat Nov 28 19:02:34 IST 2020
+- distributionBase=GRADLE_USER_HOME
+- distributionPath=wrapper/dists
+- zipStoreBase=GRADLE_USER_HOME
+- zipStorePath=wrapper/dists
+--distributionUrl=https\://services.gradle.org/distributions/gradle-6.1.1-all.zip
+-+distributionUrl=https\://services.gradle.org/distributions/gradle-6.5-bin.zip
+Index: app/src/main/res/layout/fragment_my_course.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    tools:context=\".Fragment.MyCourseFragment\">\r\n\r\n\r\n    <ListView\r\n        android:id=\"@+id/list\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_marginTop=\"?actionBarSize\"\r\n\r\n         />\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_my_course.xml	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ app/src/main/res/layout/fragment_my_course.xml	(date 1607330254643)
+@@ -7,12 +7,9 @@
+     android:orientation="vertical"
+     tools:context=".Fragment.MyCourseFragment">
+ 
+-
+     <ListView
+         android:id="@+id/list"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:layout_marginTop="?actionBarSize"
+-
+-         />
++        android:layout_marginTop="?actionBarSize" />
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/top_toolbar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.coordinatorlayout.widget.CoordinatorLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:layout_height=\"match_parent\"\r\n    android:layout_width=\"match_parent\">\r\n\r\n    <androidx.appcompat.widget.Toolbar\r\n            android:id=\"@+id/homeAppBar\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"?attr/actionBarSize\"\r\n            app:navigationIcon=\"@drawable/ic_baseline_menu_24\"\r\n            app:title=\"@string/Dmce\"\r\n            android:background=\"#30B9DC\"\r\n            android:elevation=\"3dp\"\r\n            app:titleTextColor=\"@android:color/background_light\" />\r\n\r\n    <FrameLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:id=\"@+id/frame_layout\"/>\r\n\r\n\r\n</androidx.coordinatorlayout.widget.CoordinatorLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/top_toolbar.xml	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ app/src/main/res/layout/top_toolbar.xml	(date 1607330254626)
+@@ -11,6 +11,7 @@
+             android:layout_height="?attr/actionBarSize"
+             app:navigationIcon="@drawable/ic_baseline_menu_24"
+             app:title="@string/Dmce"
++
+             android:background="#30B9DC"
+             android:elevation="3dp"
+             app:titleTextColor="@android:color/background_light" />
+Index: app/src/main/java/com/example/loginpage/Monday.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.loginpage;\r\n\r\npublic class Monday {\r\n   public String Subject;\r\n   public String InstructorName;\r\n   public String classType;\r\n   public String classNo;\r\n   public String From;\r\n   public String to;\r\n\r\n    public Monday (String subject, String instructorname, String classtype, String from, String to,String classno)\r\n    {\r\n        this.Subject = subject;\r\n        this.classType =classtype;\r\n        this.InstructorName = instructorname;\r\n        this.From = from;\r\n        this.classNo = classno;\r\n        this.to = to;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/loginpage/Monday.java	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ app/src/main/java/com/example/loginpage/Monday.java	(date 1620485202723)
+@@ -17,4 +17,6 @@
+         this.classNo = classno;
+         this.to = to;
+     }
++
++
+ }
+Index: app/src/main/res/layout/timetablcontainer.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\r\n<LinearLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:orientation=\"vertical\">\r\n<ScrollView\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:fillViewport=\"true\">\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"vertical\">\r\n                         <!-- Monday-->\r\n    <Button\r\n        android:id=\"@+id/mondaytitle\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Monday\"\r\n        android:layout_margin=\"6dp\"\r\n        android:background=\"#30B9DC\"\r\n        android:fontFamily=\"@font/roboto_medium\"\r\n        android:textSize=\"20dp\"\r\n        android:textColor=\"#fff\"\r\n        android:layout_gravity=\"center_horizontal\"/>\r\n\r\n    <ListView\r\n        android:id=\"@+id/timetable_listview_mon\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"540dp\" />\r\n                               <!-- Tuesday-->\r\n        <Button\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center_horizontal\"\r\n            android:layout_margin=\"6dp\"\r\n            android:background=\"#30B9DC\"\r\n            android:fontFamily=\"@font/roboto_medium\"\r\n            android:text=\"Tuesday\"\r\n            android:textColor=\"#fff\"\r\n            android:textSize=\"20dp\" />\r\n        <ListView\r\n            android:id=\"@+id/timetable_listview_tue\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"540dp\" />\r\n                                <!--Wednesday-->\r\n        <Button\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center_horizontal\"\r\n            android:layout_margin=\"6dp\"\r\n            android:background=\"#30B9DC\"\r\n            android:fontFamily=\"@font/roboto_medium\"\r\n            android:text=\"Wednesday\"\r\n            android:textColor=\"#fff\"\r\n            android:textSize=\"20dp\" />\r\n        <ListView\r\n            android:id=\"@+id/timetable_listview_wed\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"540dp\" />\r\n                                <!--Thursday-->\r\n        <Button\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center_horizontal\"\r\n            android:layout_margin=\"6dp\"\r\n            android:background=\"#30B9DC\"\r\n            android:fontFamily=\"@font/roboto_medium\"\r\n            android:text=\"Thursday\"\r\n            android:textColor=\"#fff\"\r\n            android:textSize=\"20dp\" />\r\n        <ListView\r\n            android:id=\"@+id/timetable_listview_thur\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"540dp\" />\r\n                            <!--Friday-->\r\n        <Button\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center_horizontal\"\r\n            android:layout_margin=\"6dp\"\r\n            android:background=\"#30B9DC\"\r\n            android:fontFamily=\"@font/roboto_medium\"\r\n            android:text=\"Friday\"\r\n            android:textColor=\"#fff\"\r\n            android:textSize=\"20dp\" />\r\n        <ListView\r\n            android:id=\"@+id/timetable_listview_fri\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"540dp\" />\r\n\r\n\r\n\r\n\r\n</LinearLayout>\r\n    </ScrollView>\r\n\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/timetablcontainer.xml	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ app/src/main/res/layout/timetablcontainer.xml	(date 1608104859996)
+@@ -1,26 +1,22 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ 
+-<LinearLayout
++<ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+-    android:layout_height="wrap_content"
+-    android:orientation="vertical">
+-<ScrollView
+-    android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fillViewport="true">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+-                         <!-- Monday-->
++        <!-- Monday-->
+     <Button
+         android:id="@+id/mondaytitle"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
++        android:background="@drawable/trial"
+         android:text="Monday"
+         android:layout_margin="6dp"
+-        android:background="#30B9DC"
+         android:fontFamily="@font/roboto_medium"
+         android:textSize="20dp"
+         android:textColor="#fff"
+@@ -36,7 +32,7 @@
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_margin="6dp"
+-            android:background="#30B9DC"
++            android:background="@drawable/trial"
+             android:fontFamily="@font/roboto_medium"
+             android:text="Tuesday"
+             android:textColor="#fff"
+@@ -51,7 +47,7 @@
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_margin="6dp"
+-            android:background="#30B9DC"
++            android:background="@drawable/trial"
+             android:fontFamily="@font/roboto_medium"
+             android:text="Wednesday"
+             android:textColor="#fff"
+@@ -66,7 +62,7 @@
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_margin="6dp"
+-            android:background="#30B9DC"
++            android:background="@drawable/trial"
+             android:fontFamily="@font/roboto_medium"
+             android:text="Thursday"
+             android:textColor="#fff"
+@@ -81,7 +77,7 @@
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_margin="6dp"
+-            android:background="#30B9DC"
++            android:background="@drawable/trial"
+             android:fontFamily="@font/roboto_medium"
+             android:text="Friday"
+             android:textColor="#fff"
+@@ -97,4 +93,4 @@
+ </LinearLayout>
+     </ScrollView>
+ 
+-</LinearLayout>
++
+Index: app/src/main/res/layout/fragment_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\r\n<ScrollView xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:fillViewport=\"true\"\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\">\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"#E2F4F8\"\r\n        tools:context=\".Fragment.HomeFragment\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView\"\r\n            android:layout_width=\"349dp\"\r\n            android:layout_height=\"52dp\"\r\n            android:background=\"@drawable/trial\"\r\n            android:gravity=\"center_horizontal\"\r\n            android:text=\"News Feed\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"#0C0C0C\"\r\n            android:textSize=\"25dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/btn2\"\r\n            app:layout_constraintVertical_bias=\"0.047\" />\r\n\r\n        <ListView\r\n            android:id=\"@+id/feed_list\"\r\n            android:layout_width=\"353dp\"\r\n            android:layout_height=\"525dp\"\r\n            android:layout_marginTop=\"4dp\"\r\n            android:layout_marginBottom=\"1dp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textView\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/btn1\"\r\n            android:layout_width=\"85dp\"\r\n            android:layout_height=\"100dp\"\r\n            android:background=\"@drawable/trial\"\r\n            android:text=\"Timetable\"\r\n            android:textSize=\"10dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.039\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"@id/guideline\"\r\n            app:layout_constraintVertical_bias=\"0.026\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/btn2\"\r\n            android:layout_width=\"85dp\"\r\n            android:layout_height=\"100dp\"\r\n            android:background=\"@drawable/trial\"\r\n            android:text=\"MyCourses\"\r\n            android:textSize=\"11dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.331\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"@id/guideline\"\r\n            app:layout_constraintVertical_bias=\"0.024\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/btn3\"\r\n            android:layout_width=\"85dp\"\r\n            android:layout_height=\"100dp\"\r\n            android:background=\"@drawable/trial\"\r\n            android:foregroundTintMode=\"src_in\"\r\n            android:text=\"Attendence\"\r\n            android:textSize=\"10dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.638\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"@id/guideline\"\r\n            app:layout_constraintVertical_bias=\"0.022\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/btn4\"\r\n            android:layout_width=\"85dp\"\r\n            android:layout_height=\"100dp\"\r\n            android:background=\"@drawable/trial\"\r\n            android:text=\"Announcement\"\r\n            android:textSize=\"12dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.938\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"@id/guideline\"\r\n            app:layout_constraintVertical_bias=\"0.02\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView2\"\r\n            android:layout_width=\"83dp\"\r\n            android:layout_height=\"92dp\"\r\n            android:src=\"@drawable/newlogo\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/guideline\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.045\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:layout_constraintVertical_bias=\"0.728\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView2\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"Nagar Yuwak Shikshan Sanstha's\"\r\n            android:textColor=\"#1323DD \"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/textView3\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.018\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/imageView2\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:layout_constraintVertical_bias=\"1.0\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView3\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"DATTA MEGHE\"\r\n            android:textColor=\"#1323DD \"\r\n            android:textColorHighlight=\"#1323DD \"\r\n            android:textSize=\"24dp\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/textView4\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.013\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/imageView2\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:layout_constraintVertical_bias=\"1.0\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView4\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginBottom=\"24dp\"\r\n            android:text=\"COLLEGE OF ENGINEERING\"\r\n            android:textColor=\"#1323DD \"\r\n            android:textColorHighlight=\"#1323DD \"\r\n            android:textSize=\"24dp\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/guideline\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.125\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/imageView2\" />\r\n\r\n        <androidx.constraintlayout.widget.Guideline\r\n            android:id=\"@+id/guideline\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:orientation=\"horizontal\"\r\n            app:layout_constraintGuide_begin=\"177dp\" />\r\n\r\n\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n</ScrollView>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_home.xml	(revision 3722f9fd0e1ab62273da025d7bc100d5de96f116)
++++ app/src/main/res/layout/fragment_home.xml	(date 1608398357083)
+@@ -1,11 +1,11 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ 
+-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
++<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:fillViewport="true"
+-    xmlns:android="http://schemas.android.com/apk/res/android">
++    android:fillViewport="true">
+ 
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+@@ -122,7 +122,7 @@
+             android:textColor="#1323DD "
+             app:layout_constraintBottom_toTopOf="@+id/textView3"
+             app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.018"
++            app:layout_constraintHorizontal_bias="0.0"
+             app:layout_constraintStart_toEndOf="@+id/imageView2"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="1.0" />
+@@ -138,25 +138,23 @@
+             android:textStyle="bold"
+             app:layout_constraintBottom_toTopOf="@+id/textView4"
+             app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.013"
+-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+-            app:layout_constraintTop_toTopOf="parent"
+-            app:layout_constraintVertical_bias="1.0" />
++            app:layout_constraintHorizontal_bias="0.0"
++            app:layout_constraintStart_toEndOf="@+id/imageView2" />
+ 
+         <TextView
+             android:id="@+id/textView4"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+-            android:layout_marginBottom="24dp"
++            android:layout_marginTop="60dp"
+             android:text="COLLEGE OF ENGINEERING"
+             android:textColor="#1323DD "
+             android:textColorHighlight="#1323DD "
+             android:textSize="24dp"
+             android:textStyle="bold"
+-            app:layout_constraintBottom_toTopOf="@+id/guideline"
+             app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.125"
+-            app:layout_constraintStart_toEndOf="@+id/imageView2" />
++            app:layout_constraintHorizontal_bias="0.0"
++            app:layout_constraintStart_toEndOf="@+id/imageView2"
++            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+ 
+         <androidx.constraintlayout.widget.Guideline
+             android:id="@+id/guideline"

@@ -11,6 +11,7 @@
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_baseline_menu_24"
             app:title="@string/Dmce"
+
             android:background="#30B9DC"
             android:elevation="3dp"
             app:titleTextColor="@android:color/background_light" />
