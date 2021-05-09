@@ -8,6 +8,7 @@
     android:paddingTop="?actionBarSize"
     tools:context=".Fragment.ProfileFragment">
 
+
     <RelativeLayout
         android:id="@+id/list2"
         android:layout_width="match_parent"
@@ -30,12 +31,12 @@
                 android:adjustViewBounds="true"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/logo" />
+                android:src="@drawable/samar" />
 
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgUser"
@@ -48,10 +49,10 @@
 
 
         <TextView
-            android:id="@+id/tv_address"
+            android:id="@+id/gr_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_name"
+            android:layout_below="@+id/name"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif"
             android:text="2019FHCO079"
@@ -94,6 +95,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -102,6 +104,7 @@
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/semester"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -130,6 +133,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/attendence"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -141,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="Attendence"
+                    android:text="Attendance"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
                     android:textSize="13sp" />
@@ -180,6 +184,7 @@
                     android:textSize="13sp" />
 
                 <TextView
+                    android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -191,7 +196,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/grey" />
 
             </LinearLayout>
 
@@ -209,6 +214,7 @@
                     android:textSize="13sp" />
 
                 <TextView
+                    android:id="@+id/phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -220,7 +226,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/grey" />
 
             </LinearLayout>
 
@@ -238,10 +244,11 @@
                     android:textSize="13sp" />
 
                 <TextView
+                    android:id="@+id/dob"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="23/23/2332"
+                    android:text="@string/date_of_birth"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -249,7 +256,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/grey" />
 
             </LinearLayout>
 
@@ -260,8 +267,5 @@
 
     </RelativeLayout>
 
-
 </RelativeLayout>
-
-
 
