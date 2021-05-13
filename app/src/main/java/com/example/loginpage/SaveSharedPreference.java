@@ -2,7 +2,9 @@ package com.example.loginpage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import androidx.preference.PreferenceManager;
+import android.preference.PreferenceManager;
+
+
 
 import com.example.loginpage.Fragment.LogoutFragment;
 

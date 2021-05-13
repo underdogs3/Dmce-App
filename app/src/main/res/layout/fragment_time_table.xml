@@ -6,8 +6,11 @@
     android:layout_height="match_parent"
     android:layout_marginTop="?actionBarSize"
     tools:context=".Fragment.TimeTableFragment">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/timetablepic">
 
-    <include layout="@layout/timetablcontainer" />
-
-
+    </ImageView>
 </FrameLayout>
