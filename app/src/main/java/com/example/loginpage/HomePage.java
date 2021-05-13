@@ -1,7 +1,6 @@
 package com.example.loginpage;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -18,7 +17,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.loginpage.Fragment.AnnouncementFragment;
 import com.example.loginpage.Fragment.AttendanceFragment;
 import com.example.loginpage.Fragment.HomeFragment;
-import com.example.loginpage.Fragment.LogoutFragment;
 import com.example.loginpage.Fragment.MyCourseFragment;
 import com.example.loginpage.Fragment.ProfileFragment;
 import com.example.loginpage.Fragment.TimeTableFragment;
