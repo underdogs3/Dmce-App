@@ -1,21 +1,16 @@
 package com.example.loginpage.Fragment;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.loginpage.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,18 +18,15 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-
-import java.util.concurrent.Executor;
 
 
 public class ProfileFragment extends Fragment {
-    TextView name, gr_number, year, sem, email, phone, attendence, dob;
+    TextView name, gr_number, year, sem, email, phone, attendence, dob,resetLink;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
+
 
 
     @Override
@@ -50,7 +42,7 @@ public class ProfileFragment extends Fragment {
         phone = view.findViewById(R.id.phone);
         dob = view.findViewById(R.id.dob);
         attendence = view.findViewById(R.id.attendence);
-
+        resetLink =view.findViewById(R.id.resetLink);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
@@ -64,7 +56,7 @@ public class ProfileFragment extends Fragment {
                         if(value.exists()){
                             name.setText(value.getString("name"));
                             gr_number.setText(value.getString("gr_no"));
-                            year.setText(value.getString("year"));
+                            year.setText(value.getString("major"));
                             phone.setText(value.getString("phone_no"));
                             sem.setText(value.getString("sem"));
                             email.setText(value.getString("email"));
@@ -72,7 +64,7 @@ public class ProfileFragment extends Fragment {
                             attendence.setText(value.getString("attendance"));
                         }else{
 
-                            Toast.makeText(getContext(), "Document does not exist", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "User does not exist", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
@@ -83,22 +75,30 @@ public class ProfileFragment extends Fragment {
                         Log.d("TAG",e.toString());
                     }
                 });
-//        documentReference.addSnapshotListener((Executor) this, new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
-//                name.setText(documentSnapshot.getString("name"));
-//                gr_number.setText(value.getString("gr_no"));
-//                year.setText(value.getString("year"));
-//                phone.setText(value.getString("phone_no"));
-//                sem.setText(value.getString("sem"));
-//                email.setText(value.getString("email"));
-//                dob.setText(value.getString("dob"));
-//                attendence.setText(value.getString("attendance"));
 
 
+        resetLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
 
+                try {
+                    VerifyPhoneNoFragment fragment = new VerifyPhoneNoFragment();
+                  //  UpdatePasswordFragment fragment = new UpdatePasswordFragment();
+                    FragmentTransaction ft = getParentFragmentManager().beginTransaction();
+                    ft.replace(R.id.frame_layout,fragment);
+                    ft.commit();
+
+                }
+                catch(Exception e) {
+                    Toast.makeText(getActivity(),"" + e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         return view;
 
     }
+
+
+
 }

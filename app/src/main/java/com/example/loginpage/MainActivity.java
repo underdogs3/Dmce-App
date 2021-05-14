@@ -15,9 +15,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-       private EditText eName;
-       private EditText ePassword;
-       private Button eLogin;
+   public  static String inputName;
+   public static String inputPassword;
+   private EditText eName;
+   private EditText ePassword;
+   private Button eLogin;
 
        private FirebaseAuth auth;
 
@@ -39,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String inputName = eName.getText().toString();
-                String inputPassword = ePassword.getText().toString();
+                 inputName = eName.getText().toString();
+                  inputPassword = ePassword.getText().toString();
                 loginUser(inputName , inputPassword);
 
 

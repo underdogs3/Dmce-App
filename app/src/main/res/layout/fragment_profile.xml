@@ -43,7 +43,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15sp"
             android:fontFamily="sans-serif-light"
-            android:text="Samar Santosh Patil"
+            android:text="Swapnil Nanasaheb Patil"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
             android:layout_below="@+id/name"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif"
-            android:text="2019FHCO079"
+            android:text="2019FHCO061"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp" />
@@ -188,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="joey@sharenofood.com"
+                    android:text="swapnilpatil27730@gmail.com"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -218,7 +218,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="+1-202-555-0157"
+                    android:text="+91932294351"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -266,6 +266,19 @@
         </LinearLayout>
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="238dp"
+        android:layout_height="53dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="Reset password"
+        android:textSize="20dp"
+        android:paddingLeft="45dp"
+        android:id="@+id/resetLink"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
 

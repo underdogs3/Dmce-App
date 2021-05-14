@@ -84,7 +84,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
         else if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
-            SaveSharedPreference.clearUserName(getApplicationContext());
+           // SaveSharedPreference.clearUserName(getApplicationContext());
             Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
